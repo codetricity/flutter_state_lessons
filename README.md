@@ -1,4 +1,4 @@
-# Flutter State Management
+<!-- # Flutter State Management
 
 To interactively change information such as color, pictures, or text on a Flutter screen, you must manage the state of the
 Flutter screen.  There are many ways to handle state in Flutter.
@@ -13,7 +13,7 @@ class that a colored box is in, you can directly control the colored box from th
 ## Challenge #1 - Manage state in a single stateful widget
 
 Use `setState()` in the `onPressed(){}` section of each button.  
-The app is in a single file.
+The app is in a single file. -->
 
 
 ## Challenge #2 - Pass Function For State Management 

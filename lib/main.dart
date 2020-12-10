@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
               padding: EdgeInsets.all(15),
               decoration: BoxDecoration(
-                border: Border.all(color: boxColor),
+                border: Border.all(color: boxColor, width: 3),
               ),
             ),
             Row(
