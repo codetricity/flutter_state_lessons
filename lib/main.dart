@@ -54,36 +54,32 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
               padding: EdgeInsets.all(15),
               decoration: BoxDecoration(
-                border: Border.all(color: boxColor),
+                border: Border.all(color: boxColor, width: 3),
               ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ColorButton(
-                    boxColor: Colors.red,
-                    colorName: 'red',
-                    changeColor: changeColor),
-                ColorButton(
-                    boxColor: Colors.blue,
-                    colorName: 'blue',
-                    changeColor: changeColor),
-                ColorButton(
-                    boxColor: Colors.green,
-                    colorName: 'green',
-                    changeColor: changeColor),
-                ColorButton(
-                    boxColor: Colors.teal,
-                    colorName: 'teal',
-                    changeColor: changeColor),
-                ColorButton(
-                    boxColor: Colors.black,
-                    colorName: 'black',
-                    changeColor: changeColor),
-                ColorButton(
-                    boxColor: Colors.purple,
-                    colorName: 'purple',
-                    changeColor: changeColor),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: RaisedButton(
+                    child: Text('red'),
+                    color: Colors.red,
+                    onPressed: () {
+                      changeColor(Colors.red);
+                    },
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(8),
+                  child: RaisedButton(
+                    child: Text('black'),
+                    color: Colors.black,
+                    onPressed: () {
+                      changeColor(Colors.black);
+                    },
+                  ),
+                ),
               ],
             ),
           ],
