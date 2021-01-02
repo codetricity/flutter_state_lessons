@@ -79,3 +79,47 @@ ColorButton(
     changeColor: changeColor),
 ```
 
+## InheritedWidget and Provider Package
+
+When you build more complex apps, it becomes difficult to 
+keep track of changes with `setState`. 
+
+To access data in a widget tree, Flutter provides an [InheritedWidget](https://api.flutter.dev/flutter/widgets/InheritedWidget-class.html).
+This is the third type of basic widget after StatelessWidget and StatefulWidget.
+
+The InheritedWidget can be difficult to use.  Most people use the Provider package that wraps an easier set of commands around the InheritedWidget.
+
+There are four concepts for the Provider package.
+
+1. ChangeNotifier
+2. ChangeNotifierProvider
+3. Consumer
+4. read and set
+
+The main concept for Provider is that a notification is sent out when information changes.
+Different sections of the app can listen for notifications.
+
+If a section such as a colored box receives a notification that the color changed, it will rebuild the colored box and the new color will be displayed. You can decide which parts of your app listen for changes.
+
+To use Provider, you need to implement these four steps: provide, notify, consume, set.
+
+1. Provide
+  * ChangeNotiferProvider
+```dart
+    create: (context) => NameModel(),
+        child: MainApp()
+```
+2. Notify
+  * NameModel
+  * extends ChangeNotifier
+3. Consume
+  * `Consumer<NameModel>`
+  * `builder: (context, model, child) => WidgetToDisplayStuff()`
+4. Set
+  * `context.read<NameModel>().setterName()`
+
+### Exercise
+
+Repeat this exercise until you can use Provider easily and understand the concepts.
+
+https://github.com/codetricity/flutter_provider_exercise
